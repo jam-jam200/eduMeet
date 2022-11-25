@@ -55,5 +55,86 @@
 }
 
 .contact__socials a:hover {
-    background: transparent;
+  background: transparent;
+}
+/** ================== end of aside ==================  */
+
+/** ================== form ==================  */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+  margin-right: 4rem;
+}
+
+.form__name {
+  display: flex;
+  gap: 1.2rem;
+}
+
+form input[type="text"] {
+  width: 50%;
+}
+
+form input::placeholder,
+textarea::placeholder {
+  color: var(--color-white);
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 1rem;
+  background: var(--color-bg);
+  color: var(--color-white);
+}
+
+form .btn {
+  width: max-content;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+/** ================== end of form ==================  */
+
+/** ================== media queries(tablet) ==================  */
+@media screen and (max-width: 1024px) {
+  .contact__container {
+    gap: 1.5rem;
+    margin-top: 3rem;
+    height: auto;
+    padding: 1.5rem;
+  }
+
+  .contact__aside {
+    width: auto;
+    padding: 1.5rem;
+    bottom: 0;
+  }
+
+  form {
+    align-self: center;
+    margin-right: 1.5rem;
+  }
+}
+
+/** ================== media queries(phone) ==================  */
+@media screen and (max-width: 600px) {
+  .contact__container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    margin-top: 0;
+    padding: 0;
+  }
+
+  form {
+    margin: 0 1.5rem 3rem;
+  }
+
+  .form__name {
+    flex-direction: column;
+  }
+
+  .form__name input[type="text"] {
+    width: 100%;
+  }
 }
